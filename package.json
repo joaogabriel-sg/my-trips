@@ -30,6 +30,8 @@
     "leaflet": "^1.7.1",
     "next": "12.0.8",
     "next-pwa": "^5.3.1",
+    "next-seo": "^4.29.0",
+    "nextjs-progressbar": "^0.0.13",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-leaflet": "^3.2.5",

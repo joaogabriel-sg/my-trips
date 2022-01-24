@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { NextSeo } from 'next-seo'
 import { CloseOutline } from '@styled-icons/evaicons-outline'
 
 import LinkWrapper from 'components/LinkWrapper'
@@ -17,6 +18,7 @@ export type PlacesTemplateProps = {
     name: string
     description?: {
       html: string
+      text: string
     }
     gallery: ImageProps[]
   }
@@ -25,6 +27,14 @@ export type PlacesTemplateProps = {
 const PlacesTemplate = ({ place }: PlacesTemplateProps) => {
   return (
     <>
+      <NextSeo
+        title={`${place.name} - My Trips`}
+        description={
+          place.description?.text ||
+          'A simple project to show in a map the places that I went and show more information and photos when clicked.'
+        }
+      />
+
       <LinkWrapper href="/">
         <CloseOutline size={32} aria-label="Go back to map" />
       </LinkWrapper>
